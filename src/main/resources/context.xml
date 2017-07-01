@@ -5,12 +5,15 @@
 
     <bean id="customerrepository" class="info.henryk.aop.CustomerRepositoryimpl"></bean>
 
-    <bean id="loggingAspect" class="info.henryk.aop.LoggingAspect"> </bean>
+    <bean id="loggingAspect" class="info.henryk.aop.LoggingAspect"></bean>
 
     <aop:config>
-    <aop:aspect ref="loggingAspect">
-        <aop:before method="logExecution" pointcut="execution(* info.henryk.aop.CustomerRepository.get* (**))"/>
-    </aop:aspect> </aop:config>
-
-
+        <aop:pointcut id="allGettersFromCustomer" expression="execution(* info.henryk.aop.CustomerRepository.get* (**))"></aop:pointcut>
+        <aop:aspect ref="loggingAspect">
+            <aop:before method="logExecution" pointcut-ref="allGettersFromCustomer" />
+            <aop:after-returning method="warnifNull"
+                                 pointcut-ref="allGettersFromCustomer"
+                                 returning="returnedValue"></aop:after-returning>
+        </aop:aspect>
+    </aop:config>
 </beans>
