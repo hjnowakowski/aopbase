@@ -18,7 +18,7 @@
                                  pointcut-ref="allGettersFromCustomer"
                                  returning="returnedValue"></aop:after-returning>
             <aop:after-throwing method="serveExeption" pointcut-ref="allAddersFromCustomer" throwing="exeption"/>
-
+            <aop:after method="methodExecuted" pointcut-ref="allAddersFromCustomer"/>
         </aop:aspect>
     </aop:config>
 </beans>

@@ -19,4 +19,8 @@ public class LoggingAspect {
     public void serveExeption(RuntimeException exeption){
         logger.error("Exeption" + exeption.getLocalizedMessage());
     }
+
+    public void methodExecuted(){
+        logger.info("Method has already executed");
+    }
 }

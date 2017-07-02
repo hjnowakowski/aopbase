@@ -17,8 +17,13 @@ public class Main {
         Customer customer1 = new Customer("Janek");
         Customer customer2 = new Customer(null);
 
-        customerrepository.addCustomer(customer1);
-        customerrepository.addCustomer(customer2);
+        try {
+            customerrepository.addCustomer(customer1);
+            customerrepository.addCustomer(customer2);
+        } catch (Exception e) {
+            System.out.println("null exception");
+            //e.printStackTrace();
+        }
 
     }
 }
