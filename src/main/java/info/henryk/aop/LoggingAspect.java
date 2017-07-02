@@ -1,6 +1,5 @@
 package info.henryk.aop;
 
-//import java.util.logging.Logger;
 import org.apache.log4j.Logger;
 
 /**
@@ -15,5 +14,9 @@ public class LoggingAspect {
         if (returnedValue == null){
             logger.warn("Returned value is null");
         }
+    }
+
+    public void serveExeption(RuntimeException exeption){
+        logger.error("Exeption" + exeption.getLocalizedMessage());
     }
 }

@@ -6,4 +6,6 @@ package info.henryk.aop;
 public interface CustomerRepository {
     Customer getCustomer(long customerid);
     String getCustomerName(long customerid);
+    void addCustomer(Customer customer);
+
 }

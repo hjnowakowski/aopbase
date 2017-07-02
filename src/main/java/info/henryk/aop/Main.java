@@ -14,9 +14,11 @@ public class Main {
 
         CustomerRepository customerrepository = context.getBean("customerrepository", CustomerRepository.class);
 
-        System.out.println(customerrepository.getCustomerName(23L));
-        customerrepository.getCustomer(23L);
+        Customer customer1 = new Customer("Janek");
+        Customer customer2 = new Customer(null);
 
+        customerrepository.addCustomer(customer1);
+        customerrepository.addCustomer(customer2);
 
     }
 }

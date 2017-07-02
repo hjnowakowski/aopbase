@@ -5,11 +5,17 @@ package info.henryk.aop;
  */
 public class CustomerRepositoryimpl implements CustomerRepository {
     public Customer getCustomer(long customerid){
-
         return null;
     }
     public String getCustomerName(long customerid){
 
         return "Janek";
+    }
+
+    public void addCustomer(Customer customer){
+        if(customer.getName() == null){
+            throw new RuntimeException(" Customer name can't be null.");
+        }
+        System.out.println("Customer saved");
     }
 }
