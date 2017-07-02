@@ -1,6 +1,7 @@
 package info.henryk.aop;
 
 import org.apache.log4j.Logger;
+import org.aspectj.lang.JoinPoint;
 
 /**
  * Created by henryknowakowski on 01.07.2017.
@@ -20,7 +21,12 @@ public class LoggingAspect {
         logger.error("Exeption" + exeption.getLocalizedMessage());
     }
 
-    public void methodExecuted(){
-        logger.info("Method has already executed");
+    public void methodExecuted(JoinPoint joinPoint){
+        joinPoint.getKind();
+        joinPoint.getArgs();
+        joinPoint.getSignature();
+        joinPoint.getTarget()
+
+        logger.info("Method "+ joinPoint.getSignature().getName() +" has already been executed");
     }
 }
