@@ -22,10 +22,6 @@ public class LoggingAspect {
     }
 
     public void methodExecuted(JoinPoint joinPoint){
-        joinPoint.getKind();
-        joinPoint.getArgs();
-        joinPoint.getSignature();
-        joinPoint.getTarget()
 
         logger.info("Method "+ joinPoint.getSignature().getName() +" has already been executed");
     }
