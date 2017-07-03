@@ -8,7 +8,7 @@ import org.aspectj.lang.JoinPoint;
  */
 public class LoggingAspect {
     private Logger logger = Logger.getLogger(getClass().getName());
-    public void logExecution(){
+    public void logExecution() {
         logger.info("Method executing");
     }
     public void warnifNull(Object returnedValue){
