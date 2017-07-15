@@ -12,18 +12,31 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 
-        CustomerRepository customerrepository = context.getBean("customerrepository", CustomerRepository.class);
+        //lesson 10
 
-        Customer customer1 = new Customer("Janek");
-        Customer customer2 = new Customer(null);
+        SomeBean someBean = context.getBean("SomeBean", SomeBean.class);
 
-        try {
-            customerrepository.addCustomer(customer1);
-            customerrepository.addCustomer(customer2);
-        } catch (Exception e) {
-            System.out.println("null exception");
-            //e.printStackTrace();
-        }
+        someBean.businessMethod();
+        someBean.nonBusinessMethod();
+
+        //end lesson 10
+
+
+//        CustomerRepository customerrepository = context.getBean("customerrepository", CustomerRepository.class);
+//
+//        Customer customer1 = new Customer("Janek");
+//        Customer customer2 = new Customer(null);
+//
+//        try {
+//            customerrepository.addCustomer(customer1);
+//            customerrepository.addCustomer(customer2);
+//        } catch (Exception e) {
+//            System.out.println("null exception");
+//            //e.printStackTrace();
+//        }
+
+
 
     }
 }
+

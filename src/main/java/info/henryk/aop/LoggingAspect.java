@@ -7,10 +7,23 @@ import org.aspectj.lang.JoinPoint;
  * Created by henryknowakowski on 01.07.2017.
  */
 public class LoggingAspect {
+
     private Logger logger = Logger.getLogger(getClass().getName());
-    public void logExecution() {
-        logger.info("Method executing");
+
+    public void logExecution(JoinPoint joinPoint){
+        System.out.println(joinPoint.getSignature());
     }
+
+
+
+
+
+//TODO: how to overload logExecution() and use logExecution(JoinPoint joinPoint)
+
+
+//    public void logExecution() {
+//        logger.info("Method executing");
+//    }
     public void warnifNull(Object returnedValue){
         if (returnedValue == null){
             logger.warn("Returned value is null");
@@ -25,4 +38,6 @@ public class LoggingAspect {
 
         logger.info("Method "+ joinPoint.getSignature().getName() +" has already been executed");
     }
+
+
 }

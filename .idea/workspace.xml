@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edd3d03c-9972-4ec4-b8cb-cd6bfc02c161" name="Default" comment="@annotation and @target usage (printing methods that were executed)">
+    <list default="true" id="edd3d03c-9972-4ec4-b8cb-cd6bfc02c161" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/info/henryk/aop/LoggingAspect.class" afterPath="$PROJECT_DIR$/target/classes/info/henryk/aop/LoggingAspect.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/info/henryk/aop/Main.class" afterPath="$PROJECT_DIR$/target/classes/info/henryk/aop/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aspectj.txt" afterPath="$PROJECT_DIR$/aspectj.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/info/henryk/aop/LoggingAspect.java" afterPath="$PROJECT_DIR$/src/main/java/info/henryk/aop/LoggingAspect.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/info/henryk/aop/Main.java" afterPath="$PROJECT_DIR$/src/main/java/info/henryk/aop/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/context.xml" afterPath="$PROJECT_DIR$/src/main/resources/context.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/context.xml" afterPath="$PROJECT_DIR$/target/classes/context.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -847,7 +845,7 @@
       <workItem from="1498903635745" duration="8746000" />
       <workItem from="1498991912029" duration="8683000" />
       <workItem from="1499631099533" duration="50000" />
-      <workItem from="1500108196863" duration="3052000" />
+      <workItem from="1500108196863" duration="3097000" />
     </task>
     <task id="LOCAL-00001" summary="universal poincut in context.xml added">
       <created>1498913714117</created>
@@ -860,7 +858,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20653000" />
+    <option name="totallyTimeSpent" value="20698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="806" extended-state="6" />
