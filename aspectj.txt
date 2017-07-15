@@ -1,0 +1,27 @@
+AspectJ:
+
+execution([modyfikator-dostępu] [pakiet.podpakiet.Klasa.]nazwaMetody(parametry))
+
+
+
+".." - metody o każdej ilości parametrów
+
+"* Method" - gwiazdka oznacza, że dana metoda może oznaczać cokolwiek
+
+pointcut-ref - pozwala na użycie poincuta już zdeklarowanego
+
+Można łączyć expression w następujący sposób
+
+<aop:poincut expression="exacution (* set*(..)) || exacution (* get*(..))"
+
+jako parametr "*" znaczy jeden parametr dowolnego typu
+
+jako parametr "String", dokładnie jeden parametr, który jest Stringiem
+
+jako parametr "*, .." z jednym parametrem, lub więcej
+
+Możliwe kombinacje parametrów:
+
+"String, * , .." czyli (String, dowolnego typu jeden argument, dowolna ilość arg dowolnego typu)
+
+żeby uruchomić wszystkie metody dowolnych klas w ramach jakiegoś pakietu na końcu piszemu "..*"

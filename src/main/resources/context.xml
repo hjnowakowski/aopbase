@@ -9,12 +9,18 @@
 
     <bean id="benchmarkAspect" class="info.henryk.aop.BenchmarkAspect"></bean>
 
+    <bean id="SomeBean" class="info.henryk.aop.SomeBean"/>
+
     <aop:config>
 
         <aop:pointcut id="allGettersFromCustomer" expression="execution(* * (..))"></aop:pointcut>
         <aop:pointcut id="allAddersFromCustomer" expression="execution(* info.henryk.aop.CustomerRepository.add* (..))"></aop:pointcut>
+        <aop:pointcut id="businessMethod" expression="@annotation(info.henryk.aop.BusinessMethod)"/>
+        <aop:pointcut id="businessClassMethods" expression="@target(info.henryk.aop.BusinessClass)"/>
+
 
         <aop:aspect ref="loggingAspect">
+            <aop:before method="logExecution" pointcut-ref="businessClassMethods"/>
             <aop:before method="logExecution" pointcut-ref="allGettersFromCustomer"/>
             <aop:after-returning method="warnifNull" pointcut-ref="allGettersFromCustomer" returning="returnedValue"></aop:after-returning>
             <aop:after-throwing method="serveExeption" pointcut-ref="allAddersFromCustomer" throwing="exeption"/>
